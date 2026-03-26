@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Edu - Kelas</title>
+    <!-- CSS Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Our Custom Style -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/main.js" defer></script>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="logo">
+                    <img src="./res/SEA.jpg" alt="Smart Edu Logo">
+                    <span class="logo-text">Smart Edu</span>
+                </a>
+
+                <nav class="nav-desktop">
+                    <a href="index.html">Home</a>
+                    <a href="kelas.html">Kelas</a>
+                    <a href="#">Tentang kami</a>
+                    <a href="#">Contact</a>
+                </nav>
+
+                <div class="header-buttons">
+                    <button class="btn btn-primary">Log In</button>
+                    <button class="btn btn-secondary">Daftar</button>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobile-menu-button">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Content for Kelas -->
+    <section class="section" style="padding-top: 140px; min-height: 70vh;">
+        <div class="container">
+            <h2 class="section-title">Video Kelas Terfavorit</h2>
+            <p class="section-subtitle">Tonton pembahasan materi-materi pilihan oleh tim pengajar profesional kami secara eksklusif dan gratis.</p>
+            
+            <div class="video-grid">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/0fV36QJQ8T8?si=oRI62RQqOU9bwryI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/FAc-BACekkY?si=KL8Bn-h7BWuKklR7" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+            
+            <!-- Courses Display -->
+            <div style="margin-top: 100px;">
+                <h2 class="section-title">Telusuri Modul Pendidikan Lainnya</h2>
+                <div class="grid grid-cols-1 grid-cols-sm-2 grid-cols-lg-4" id="courses-container">
+                    <!-- Isi kelas akan diisi oleh JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <span class="footer-logo">Smart Edu</span>
+                    <p class="footer-description">Memajukan dan mentransformasi cara berpikir rasional pelajar di Indonesia lintas dekade.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" class="social-icon"><i class="ri-twitter-fill"></i></a>
+                        <a href="#" class="social-icon"><i class="ri-instagram-line"></i></a>
+                        <a href="#" class="social-icon"><i class="ri-youtube-fill"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Link Cepat (Shortcut)</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="kelas.html">Kelas</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Aljabar</a></li>
+                        <li><a href="#">Geometri</a></li>
+                        <li><a href="#">Kalkulus</a></li>
+                        <li><a href="#">Statistika</a></li>
+                        <li><a href="#">Trigonometri</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li class="footer-contact-item">
+                            <div class="footer-contact-icon"><i class="ri-map-pin-line"></i></div>
+                            <span class="footer-contact-text">Jl. Cicalengka Raya No. 69, Antapani Kidul, Bandung, Jawa Barat, Indonesia</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <div class="footer-contact-icon"><i class="ri-mail-line"></i></div>
+                            <span class="footer-contact-text">HendrikTopGlobalDonghuang@gmail.com</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <div class="footer-contact-icon"><i class="ri-phone-line"></i></div>
+                            <span class="footer-contact-text">+62 812 0000 0000</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Smart Edu. All rights reserved. Built with passion for better education.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="mobile-menu-logo" style="text-decoration:none;">
+                <img src="./res/SEA.jpg" alt="Smart Edu Logo">
+                <span>Smart Edu</span>
+            </a>
+            <button class="close-menu" id="close-menu">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+
+        <nav class="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="kelas.html">Kelas</a>
+            <a href="#">Tentang kami</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="mobile-buttons">
+            <button class="btn btn-primary">Log In</button>
+            <button class="btn btn-secondary">Daftar</button>
+        </div>
+    </div>
+</body>
+</html>
