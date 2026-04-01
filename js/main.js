@@ -224,38 +224,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     animatedElements.forEach(el => scrollObserver.observe(el));
 
-    // Navbar Scroll Effect
+    // Navbar Scroll Effect & Back to Top — single listener for performance
     let lastScrollTop = 0;
     const header = document.querySelector('header');
-    
-    window.addEventListener('scroll', () => {
-        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-        if (currentScroll > lastScrollTop && currentScroll > 50) {
-            // Scrolling down: make transparent
-            header.classList.add('header-transparent');
-        } else {
-            // Scrolling up: make solid
-            header.classList.remove('header-transparent');
-        }
-        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-    }, { passive: true });
-
-    // Back to Top Button Logic
     const backToTopBtn = document.getElementById('back-to-top');
     
     window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 300) {
-            backToTopBtn.classList.add('active');
-        } else {
-            backToTopBtn.classList.remove('active');
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        
+        // Navbar transparency
+        if (header) {
+            if (currentScroll > lastScrollTop && currentScroll > 50) {
+                header.classList.add('header-transparent');
+            } else {
+                header.classList.remove('header-transparent');
+            }
         }
+        
+        // Back to top visibility
+        if (backToTopBtn) {
+            if (currentScroll > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        }
+        
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     }, { passive: true });
 
-    backToTopBtn.addEventListener('click', () => {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-    });
+    }
 });
-

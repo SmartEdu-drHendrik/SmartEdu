@@ -129,6 +129,7 @@ h6 {
 
 .section {
     padding: 80px 0;
+    position: relative;
 }
 
 .section-title {
@@ -137,6 +138,7 @@ h6 {
     text-align: center;
     margin-bottom: 16px;
     color: var(--primary-dark);
+    letter-spacing: -0.5px;
 }
 
 .section-subtitle {
@@ -145,6 +147,7 @@ h6 {
     color: var(--gray-600);
     max-width: 768px;
     margin: 0 auto 56px;
+    line-height: 1.7;
 }
 
 .card {
@@ -152,13 +155,13 @@ h6 {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     overflow: hidden;
-    transition: all var(--transition-normal);
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid rgba(0, 0, 0, 0.04);
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.12);
 }
 
 .card-body {
@@ -218,13 +221,26 @@ h6 {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: var(--white);
+    background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 40%, #fff9f0 100%);
     z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     transition: opacity 0.8s ease-in-out, visibility 0.8s;
+}
+
+.intro-overlay::before {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(102, 176, 255, 0.08) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
 }
 
 .intro-overlay.hidden {
@@ -525,6 +541,18 @@ header.header-transparent {
     background-attachment: fixed;
     padding: 160px 0 100px;
     margin-top: 0;
+    position: relative;
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(to top, var(--white), transparent);
+    pointer-events: none;
 }
 
 @media (max-width: 767px) {
@@ -557,9 +585,11 @@ header.header-transparent {
 }
 
 .hero-description {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: var(--gray-700);
     margin-bottom: 40px;
+    max-width: 620px;
+    line-height: 1.8;
 }
 
 /* Smart Edu Logo Styling (Text format) */
@@ -683,17 +713,39 @@ header.header-transparent {
 }
 
 /* Key Benefits Section */
+.benefits-section {
+    background: linear-gradient(180deg, var(--white) 0%, var(--gray-50) 100%);
+}
+
 .benefit-card {
     display: flex;
     flex-direction: column;
     height: 100%;
+    border-top: 4px solid var(--primary-color);
 }
+
+.benefit-card:nth-child(2) {
+    border-top-color: var(--secondary-color);
+}
+
+.benefit-card:nth-child(3) {
+    border-top-color: #6c63ff;
+}
+
+.benefit-card:nth-child(1) { transition-delay: 0.1s; }
+.benefit-card:nth-child(2) { transition-delay: 0.2s; }
+.benefit-card:nth-child(3) { transition-delay: 0.3s; }
 
 .benefit-img {
     width: 100%;
     height: 220px;
     object-fit: cover;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.5s ease;
+}
+
+.benefit-card:hover .benefit-img {
+    transform: scale(1.05);
 }
 
 .benefit-title {
@@ -707,7 +759,7 @@ header.header-transparent {
 .benefit-description {
     font-size: 1rem;
     color: var(--gray-700);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 
@@ -736,6 +788,24 @@ header.header-transparent {
     height: 200%;
     background: rgba(255, 255, 255, 0.05);
     transform: rotate(30deg);
+}
+
+.newsletter-title {
+    color: var(--white) !important;
+    position: relative;
+    z-index: 2;
+}
+
+.newsletter-subtitle {
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin-bottom: 32px !important;
+    position: relative;
+    z-index: 2;
+}
+
+.newsletter-video-wrap {
+    position: relative;
+    z-index: 2;
 }
 
 .newsletter-video {
@@ -993,6 +1063,22 @@ footer {
 }
 
 /* Testimonial Specific */
+.testimonial-card {
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '\201C';
+    position: absolute;
+    top: 20px;
+    right: 28px;
+    font-size: 5rem;
+    font-family: 'Georgia', serif;
+    color: rgba(102, 176, 255, 0.1);
+    line-height: 1;
+    pointer-events: none;
+}
+
 .testimonial-header {
     display: flex;
     align-items: center;
@@ -1003,16 +1089,16 @@ footer {
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--gray-200), var(--gray-300));
+    background: linear-gradient(135deg, var(--primary-color), #4a9eff);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--gray-800);
+    color: var(--white);
     font-weight: 700;
     font-size: 1.2rem;
     margin-right: 20px;
     flex-shrink: 0;
-    box-shadow: var(--shadow-sm);
+    box-shadow: 0 4px 12px rgba(102, 176, 255, 0.35);
 }
 
 .testimonial-info {
@@ -1038,6 +1124,7 @@ footer {
     color: var(--gray-700);
     font-style: italic;
     font-size: 1.05rem;
+    line-height: 1.7;
     position: relative;
     z-index: 1;
 }
@@ -1160,8 +1247,8 @@ footer {
 /* Scroll Animations */
 .animate-on-scroll {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(40px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .animate-on-scroll.is-visible {
@@ -1267,7 +1354,7 @@ body.no-scroll {
     right: 30px;
     width: 50px;
     height: 50px;
-    background-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
     color: white;
     border-radius: 50%;
     display: flex;
@@ -1276,20 +1363,21 @@ body.no-scroll {
     font-size: 1.5rem;
     cursor: pointer;
     border: none;
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 4px 15px rgba(58, 142, 230, 0.35);
     z-index: 998;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
+    transform: translateY(20px);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .back-to-top.active {
     opacity: 1;
     visibility: visible;
+    transform: translateY(0);
 }
 
 .back-to-top:hover {
-    background-color: var(--primary-dark);
     transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
+    box-shadow: 0 8px 25px rgba(58, 142, 230, 0.5);
 }
