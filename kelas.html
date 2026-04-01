@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Edu - Kelas</title>
+    <title>Smart Edu - Kelas | Pilihan Kelas Matematika & Modul Interaktif</title>
+    <meta name="description" content="Temukan berbagai video kelas dan modul pendidikan matematika eksklusif dari SmartEdu oleh Dr. Hendrik. Belajar konsep aljabar, geometri, dan statistika dengan mudah.">
+    <meta name="keywords" content="kelas matematika, modul pendidikan, belajar online, video pembelajaran, aljabar, geometri, statistika">
     <!-- CSS Fonts and Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +17,14 @@
     <script src="./js/main.js" defer></script>
 </head>
 <body class="bg-white">
+    <!-- Intro Animation Overlay -->
+    <div id="intro-overlay" class="intro-overlay">
+        <div class="intro-logo">
+            <span class="smart-part intro-smart">Smart</span>
+            <span class="edu-part intro-edu">Edu</span>
+        </div>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="container header-container">
@@ -27,8 +37,8 @@
                 <nav class="nav-desktop">
                     <a href="index.html">Home</a>
                     <a href="kelas.html">Kelas</a>
-                    <a href="#">Tentang kami</a>
-                    <a href="#">Contact</a>
+                    <a href="index.html#founder">Tentang kami</a>
+                    <a href="#contact">Contact</a>
                 </nav>
 
                 <div class="header-buttons">
@@ -47,21 +57,21 @@
     <!-- Content for Kelas -->
     <section class="section" style="padding-top: 140px; min-height: 70vh;">
         <div class="container">
-            <h2 class="section-title">Video Kelas Terfavorit</h2>
-            <p class="section-subtitle">Tonton pembahasan materi-materi pilihan oleh tim pengajar profesional kami secara eksklusif dan gratis.</p>
+            <h2 class="section-title animate-on-scroll">Video Kelas Terfavorit</h2>
+            <p class="section-subtitle animate-on-scroll">Tonton pembahasan materi-materi pilihan oleh tim pengajar profesional kami secara eksklusif dan gratis.</p>
             
             <div class="video-grid">
-                <div class="video-wrapper">
+                <div class="video-wrapper animate-on-scroll">
                     <iframe src="https://www.youtube.com/embed/0fV36QJQ8T8?si=oRI62RQqOU9bwryI" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-                <div class="video-wrapper">
+                <div class="video-wrapper animate-on-scroll">
                     <iframe src="https://www.youtube.com/embed/FAc-BACekkY?si=KL8Bn-h7BWuKklR7" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
             
             <!-- Courses Display -->
             <div style="margin-top: 100px;">
-                <h2 class="section-title">Telusuri Modul Pendidikan Lainnya</h2>
+                <h2 class="section-title animate-on-scroll">Telusuri Modul Pendidikan Lainnya</h2>
                 <div class="grid grid-cols-1 grid-cols-sm-2 grid-cols-lg-4" id="courses-container">
                     <!-- Isi kelas akan diisi oleh JavaScript -->
                 </div>
@@ -70,7 +80,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="contact">
         <div class="container">
             <div class="footer-grid">
                 <div>
@@ -149,8 +159,8 @@
         <nav class="mobile-nav">
             <a href="index.html">Home</a>
             <a href="kelas.html">Kelas</a>
-            <a href="#">Tentang kami</a>
-            <a href="#">Contact</a>
+            <a href="index.html#founder">Tentang kami</a>
+            <a href="#contact">Contact</a>
         </nav>
 
         <div class="mobile-buttons">
@@ -158,5 +168,11 @@
             <button class="btn btn-secondary">Daftar</button>
         </div>
     </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
 </body>
 </html>

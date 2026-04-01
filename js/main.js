@@ -26,6 +26,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Intro Animation Logic
+    window.addEventListener('load', () => {
+        const introOverlay = document.getElementById('intro-overlay');
+        const introLogo = document.querySelector('.intro-logo');
+        
+        if (introOverlay && introLogo) {
+            // Prevent scrolling while intro is active
+            document.body.style.overflow = 'hidden';
+            
+            // Wait for slide animations to finish (1.2s total) + reading time (0.5s)
+            setTimeout(() => {
+                introLogo.classList.add('zoom-out');
+                
+                // Wait for zoom out animation to finish (1s)
+                setTimeout(() => {
+                    introOverlay.classList.add('hidden');
+                    
+                    // Allow scrolling after intro
+                    document.body.style.overflow = '';
+                    
+                    // Cleanup from DOM after transition
+                    setTimeout(() => {
+                        introOverlay.remove();
+                    }, 800);
+                }, 1000);
+            }, 1700);
+        }
+    });
+
     // Set active link visually based on current page
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-desktop a, .mobile-nav a');
@@ -194,4 +223,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const animatedElements = document.querySelectorAll('.animate-on-scroll');
     animatedElements.forEach(el => scrollObserver.observe(el));
+
+    // Navbar Scroll Effect
+    let lastScrollTop = 0;
+    const header = document.querySelector('header');
+    
+    window.addEventListener('scroll', () => {
+        let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (currentScroll > lastScrollTop && currentScroll > 50) {
+            // Scrolling down: make transparent
+            header.classList.add('header-transparent');
+        } else {
+            // Scrolling up: make solid
+            header.classList.remove('header-transparent');
+        }
+        lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    }, { passive: true });
+
+    // Back to Top Button Logic
+    const backToTopBtn = document.getElementById('back-to-top');
+    
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('active');
+        } else {
+            backToTopBtn.classList.remove('active');
+        }
+    }, { passive: true });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 });
+

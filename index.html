@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Edu - Home</title>
+    <title>Smart Edu - Home | Bimbingan Belajar & Konsultasi Pendidikan Anak No. 1</title>
+    <meta name="description" content="SmartEdu Dr. Hendrik: Program pendidikan terbukti mengubah pola pikir anak malas menjadi rajin dan ahli matematika dengan cepat melalui metode out-of-the-box.">
+    <meta name="keywords" content="SmartEdu, Dr. Hendrik, bimbingan belajar, kursus matematika, konsultasi anak, pendidikan Indonesia, belajar cepat">
     <!-- CSS Fonts and Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +20,14 @@
 </head>
 
 <body>
+    <!-- Intro Animation Overlay -->
+    <div id="intro-overlay" class="intro-overlay">
+        <div class="intro-logo">
+            <span class="smart-part intro-smart">Smart</span>
+            <span class="edu-part intro-edu">Edu</span>
+        </div>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="container header-container">
@@ -30,8 +40,8 @@
                 <nav class="nav-desktop">
                     <a href="index.html">Home</a>
                     <a href="kelas.html">Kelas</a>
-                    <a href="#">Tentang kami</a>
-                    <a href="#">Contact</a>
+                    <a href="#founder">Tentang kami</a>
+                    <a href="#contact">Contact</a>
                 </nav>
 
                 <div class="header-buttons">
@@ -154,7 +164,7 @@
     </section>
 
     <!-- About Founder Section -->
-    <section class="section features-section">
+    <section class="section features-section" id="founder">
         <div class="container">
             <h2 class="section-title animate-on-scroll">Kenalan dengan Founder Kami</h2>
             <p class="section-subtitle animate-on-scroll">Seorang visioner dan ahli pendidikan di balik SmartEdu yang
@@ -237,7 +247,7 @@
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="contact">
         <div class="container">
             <div class="footer-grid">
                 <div>
@@ -318,8 +328,8 @@
         <nav class="mobile-nav">
             <a href="index.html">Home</a>
             <a href="kelas.html">Kelas</a>
-            <a href="#">Tentang kami</a>
-            <a href="#">Contact</a>
+            <a href="#founder">Tentang kami</a>
+            <a href="#contact">Contact</a>
         </nav>
 
         <div class="mobile-buttons">
@@ -327,6 +337,12 @@
             <button class="btn btn-secondary">Daftar</button>
         </div>
     </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="ri-arrow-up-line"></i>
+    </button>
 </body>
 
 </html>
