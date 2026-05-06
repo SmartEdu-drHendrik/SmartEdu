@@ -1347,6 +1347,529 @@ body.no-scroll {
     overflow: hidden;
 }
 
+/* Gate Page — Selector Panel (Base) */
+.gate-panel {
+    border-radius: var(--radius-xl);
+    padding: 40px 32px 36px;
+    text-align: center;
+    margin-bottom: 32px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.6s ease, box-shadow 0.6s ease;
+}
+
+.gate-panel::before,
+.gate-panel::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.gate-panel-logo {
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.gate-panel-logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border-radius: var(--radius-lg);
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.gate-panel-title {
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== GATE 1 — Blue + Rising Bubbles ===== */
+.gate-panel[data-gate="1"] {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    box-shadow: 0 8px 30px rgba(58, 142, 230, 0.3);
+}
+
+.gate-panel[data-gate="1"]::before {
+    bottom: -60px;
+    left: 8%;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow:
+        80px 10px 0 14px rgba(255, 255, 255, 0.07),
+        170px -20px 0 8px rgba(255, 255, 255, 0.1),
+        260px 15px 0 18px rgba(255, 255, 255, 0.05),
+        370px -5px 0 10px rgba(255, 255, 255, 0.08),
+        460px 20px 0 22px rgba(255, 255, 255, 0.04),
+        550px -15px 0 6px rgba(255, 255, 255, 0.09),
+        130px 30px 0 12px rgba(255, 255, 255, 0.06);
+    animation: bubbleRise 10s ease-in infinite;
+}
+
+.gate-panel[data-gate="1"]::after {
+    bottom: -90px;
+    left: 15%;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow:
+        50px 25px 0 10px rgba(255, 255, 255, 0.06),
+        140px -10px 0 16px rgba(255, 255, 255, 0.04),
+        230px 5px 0 6px rgba(255, 255, 255, 0.09),
+        320px 30px 0 20px rgba(255, 255, 255, 0.03),
+        420px -20px 0 8px rgba(255, 255, 255, 0.07),
+        500px 15px 0 14px rgba(255, 255, 255, 0.05);
+    animation: bubbleRise 14s ease-in 2s infinite;
+}
+
+@keyframes bubbleRise {
+    0% {
+        transform: translateY(0);
+        opacity: 0.9;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-350px);
+        opacity: 0;
+    }
+}
+
+/* ===== GATE 2 — Orange + Futuristic Grid ===== */
+.gate-panel[data-gate="2"] {
+    background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark));
+    box-shadow: 0 8px 30px rgba(232, 135, 46, 0.3);
+}
+
+.gate-panel[data-gate="2"]::before {
+    inset: 0;
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 38px,
+            rgba(255, 255, 255, 0.04) 38px,
+            rgba(255, 255, 255, 0.04) 40px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 38px,
+            rgba(255, 255, 255, 0.04) 38px,
+            rgba(255, 255, 255, 0.04) 40px
+        );
+    animation: gridDrift 6s linear infinite;
+}
+
+.gate-panel[data-gate="2"]::after {
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.06) 40%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0.06) 60%,
+        transparent
+    );
+    animation: gridSweep 5s ease-in-out infinite;
+}
+
+@keyframes gridDrift {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(40px, 40px); }
+}
+
+@keyframes gridSweep {
+    0% { left: -60%; }
+    100% { left: 120%; }
+}
+
+/* ===== GATE 3 — Blue-Orange Gradient + Glowing Particles ===== */
+.gate-panel[data-gate="3"] {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #8b5cf6 40%, var(--secondary-color) 100%);
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.3);
+}
+
+.gate-panel[data-gate="3"]::before {
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    transform: translate(-50%, -50%);
+    box-shadow:
+        -120px -40px 6px 1px rgba(255, 255, 255, 0.5),
+        80px -60px 8px 2px rgba(255, 220, 150, 0.4),
+        -200px 30px 5px 1px rgba(180, 200, 255, 0.5),
+        160px 50px 7px 2px rgba(255, 200, 100, 0.3),
+        -60px 70px 4px 1px rgba(255, 255, 255, 0.6),
+        220px -20px 6px 1px rgba(200, 180, 255, 0.4),
+        -160px -70px 8px 2px rgba(255, 230, 180, 0.3),
+        40px 80px 5px 1px rgba(255, 255, 255, 0.45),
+        300px 10px 4px 1px rgba(180, 160, 255, 0.35),
+        -250px 50px 6px 2px rgba(255, 200, 130, 0.25);
+    animation: particlePulse 4s ease-in-out infinite alternate;
+}
+
+.gate-panel[data-gate="3"]::after {
+    top: 50%;
+    left: 50%;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: translate(-50%, -50%);
+    box-shadow:
+        -80px 60px 5px 1px rgba(255, 220, 180, 0.4),
+        120px 40px 7px 2px rgba(200, 180, 255, 0.35),
+        -180px -50px 4px 1px rgba(255, 255, 255, 0.5),
+        200px -30px 6px 2px rgba(255, 200, 100, 0.3),
+        -30px -80px 5px 1px rgba(180, 200, 255, 0.45),
+        260px 60px 8px 2px rgba(255, 230, 170, 0.25),
+        -220px 20px 4px 1px rgba(255, 255, 255, 0.35),
+        70px -60px 6px 1px rgba(200, 160, 255, 0.4);
+    animation: particlePulse 5s ease-in-out 1s infinite alternate-reverse;
+}
+
+@keyframes particlePulse {
+    0% {
+        opacity: 0.4;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.15);
+    }
+    100% {
+        opacity: 0.5;
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+}
+
+
+/* Gate Page — Tabs (inside orange panel) */
+.gate-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.gate-tab {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: var(--radius-full);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.gate-tab:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.6);
+    color: var(--white);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.gate-tab.active {
+    background: var(--white);
+    color: var(--secondary-dark);
+    border-color: var(--white);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.gate-tab i {
+    font-size: 1.2rem;
+}
+
+/* Gate Page — Search Bar */
+.gate-search-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--white);
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-full);
+    padding: 14px 24px;
+    margin-bottom: 24px;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.gate-search-bar:focus-within {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 4px rgba(255, 159, 67, 0.15);
+}
+
+.gate-search-bar i {
+    font-size: 1.3rem;
+    color: var(--gray-600);
+    flex-shrink: 0;
+}
+
+.gate-search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: var(--gray-800);
+    width: 100%;
+}
+
+.gate-search-bar input::placeholder {
+    color: var(--gray-300);
+}
+
+/* Gate Page — Pagination */
+.gate-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 24px;
+    border-top: 1px solid var(--gray-100);
+}
+
+.page-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--gray-200);
+    background: var(--white);
+    color: var(--gray-600);
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.page-btn:hover:not(:disabled) {
+    background: var(--secondary-color);
+    color: var(--white);
+    border-color: var(--secondary-color);
+    box-shadow: 0 3px 10px rgba(255, 159, 67, 0.3);
+}
+
+.page-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 6px;
+}
+
+.page-num {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--gray-200);
+    background: var(--white);
+    color: var(--gray-700);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+.page-num:hover {
+    border-color: var(--secondary-color);
+    color: var(--secondary-dark);
+}
+
+.page-num.active {
+    background: linear-gradient(135deg, var(--secondary-color), var(--secondary-dark));
+    color: var(--white);
+    border-color: transparent;
+    box-shadow: 0 3px 12px rgba(255, 159, 67, 0.35);
+}
+
+/* Gate Page — Table Container */
+.gate-table-container {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.gate-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    background: linear-gradient(135deg, rgba(102, 176, 255, 0.08), rgba(102, 176, 255, 0.02));
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.gate-table-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.gate-table-title i {
+    font-size: 1.5rem;
+}
+
+.gate-entry-count {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--white);
+    background: var(--primary-color);
+    padding: 6px 16px;
+    border-radius: var(--radius-full);
+}
+
+/* Gate Page — Table */
+.table-responsive {
+    overflow-x: auto;
+}
+
+.gate-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+.gate-table thead th {
+    background: var(--gray-50);
+    color: var(--gray-700);
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 16px 24px;
+    text-align: left;
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.gate-table thead th:first-child {
+    width: 80px;
+    text-align: center;
+}
+
+.gate-table thead th:last-child {
+    width: 120px;
+    text-align: center;
+}
+
+.gate-table tbody tr {
+    transition: background 0.2s ease;
+    animation: rowFadeIn 0.4s ease forwards;
+    opacity: 0;
+}
+
+.gate-table tbody tr:nth-child(even) {
+    background-color: rgba(102, 176, 255, 0.03);
+}
+
+.gate-table tbody tr:hover {
+    background-color: rgba(102, 176, 255, 0.08);
+}
+
+.gate-table tbody td {
+    padding: 16px 24px;
+    color: var(--gray-800);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.gate-table tbody td.cell-no {
+    text-align: center;
+    font-weight: 700;
+    color: var(--primary-dark);
+    font-size: 1.1rem;
+}
+
+.gate-table tbody td.cell-nama {
+    font-weight: 500;
+}
+
+.gate-table tbody td.cell-nama mark {
+    background: rgba(255, 159, 67, 0.25);
+    color: var(--secondary-dark);
+    padding: 1px 3px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+
+.gate-table tbody td.cell-jp {
+    text-align: center;
+    font-weight: 700;
+    color: var(--secondary-dark);
+    font-size: 1.05rem;
+}
+
+@keyframes rowFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gate Page — Empty State */
+.gate-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px;
+    color: var(--gray-600);
+}
+
+.gate-empty i {
+    font-size: 4rem;
+    color: var(--gray-300);
+    margin-bottom: 16px;
+}
+
+.gate-empty p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
 /* Back to Top Button */
 .back-to-top {
     position: fixed;
