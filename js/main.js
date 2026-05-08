@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
     const closeMenuButton = document.getElementById('close-menu');
-    
+
     // Safety check for mobile menu elements
     if (mobileMenuButton && mobileMenu && mobileMenuOverlay && closeMenuButton) {
         function toggleMobileMenu() {
@@ -30,22 +30,22 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', () => {
         const introOverlay = document.getElementById('intro-overlay');
         const introLogo = document.querySelector('.intro-logo');
-        
+
         if (introOverlay && introLogo) {
             // Prevent scrolling while intro is active
             document.body.style.overflow = 'hidden';
-            
+
             // Wait for slide animations to finish (1.2s total) + reading time (0.5s)
             setTimeout(() => {
                 introLogo.classList.add('zoom-out');
-                
+
                 // Wait for zoom out animation to finish (1s)
                 setTimeout(() => {
                     introOverlay.classList.add('hidden');
-                    
+
                     // Allow scrolling after intro
                     document.body.style.overflow = '';
-                    
+
                     // Cleanup from DOM after transition
                     setTimeout(() => {
                         introOverlay.remove();
@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Set active link visually based on current page
     const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.nav-desktop a, .mobile-nav a');
-    
+
     navLinks.forEach(link => {
         const href = link.getAttribute('href');
         if (href && currentPath.includes(href) && href !== '#') {
@@ -118,22 +118,39 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mock data for testimonials
     const testimonialsData = [
         {
-            name: "Kenny Richie Nergiva",
-            role: "Juara HACKATHON National 2024",
-            initials: "KR",
-            content: "Smart Edu ini beneran merubah hidup saya, karna sebelum saya masuk smart edu ini saya jujur tidak suka ngitung-ngitung apalagi matematika, namun setelah dr.Hendrik merubah pola pikir saya, saya berhasil mendapatkan 11 kali bintang matematika selagi saat saya masih SD"
+            name: "",
+            role: "",
+            initials: "",
+            image: "./res/newsResource/Screenshot (21).png",
+            content: "tekan untuk melihat full"
         },
         {
-            name: "Hazel Firdaus keepa",
-            role: "Pelajar SDS El-Fitra Badung",
-            initials: "HF",
-            content: "Saya merekomendasikan smart edu ini bagi teman-teman yang kesulitan dalam menyelesaikan soal matematika, penjelasannya sangat out of the box dan luar biasa, memberikan kita pemahaman dan visualisasi unik."
+            name: "",
+            role: "",
+            initials: "",
+            image: "./res/newsResource/Screenshot (22).png",
+            content: "tekan untuk melihat full"
         },
         {
-            name: "Etherilly Krasivaya Devuska",
-            role: "Pelajar",
-            initials: "EK",
-            content: "Kurikulum yang diajarkan sangat sistematis, saya berhasil menyelesaikan materi kalkulus lanjutan dengan sangat mudah."
+            name: "",
+            role: "",
+            initials: "",
+            image: "./res/newsResource/Screenshot (23).png",
+            content: "tekan untuk melihat full"
+        },
+        {
+            name: "",
+            role: "",
+            initials: "",
+            image: "./res/newsResource/Screenshot (24).png",
+            content: "tekan untuk melihat full"
+        },
+        {
+            name: "",
+            role: "",
+            initials: "",
+            image: "./res/newsResource/Screenshot (25).png",
+            content: "tekan untuk melihat full"
         }
     ];
 
@@ -187,14 +204,8 @@ document.addEventListener('DOMContentLoaded', () => {
             testimonialElement.className = 'card testimonial-card animate-on-scroll';
             testimonialElement.innerHTML = `
                 <div class="card-body">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">
-                            ${testimonial.initials}
-                        </div>
-                        <div class="testimonial-info">
-                            <h4 class="testimonial-name">${testimonial.name}</h4>
-                            <p class="testimonial-role">${testimonial.role}</p>
-                        </div>
+                    <div class="testimonial-image-container">
+                        <img src="${testimonial.image}" alt="Testimoni" class="testimonial-photo">
                     </div>
                     <p class="testimonial-content">"${testimonial.content}"</p>
                 </div>
@@ -228,10 +239,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let lastScrollTop = 0;
     const header = document.querySelector('header');
     const backToTopBtn = document.getElementById('back-to-top');
-    
+
     window.addEventListener('scroll', () => {
         const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-        
+
         // Navbar transparency
         if (header) {
             if (currentScroll > lastScrollTop && currentScroll > 50) {
@@ -240,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 header.classList.remove('header-transparent');
             }
         }
-        
+
         // Back to top visibility
         if (backToTopBtn) {
             if (currentScroll > 300) {
@@ -249,13 +260,105 @@ document.addEventListener('DOMContentLoaded', () => {
                 backToTopBtn.classList.remove('active');
             }
         }
-        
+
         lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
     }, { passive: true });
 
     if (backToTopBtn) {
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('news-slider');
+    let isDown = false;
+    let startDate;
+    let scrollLeft;
+
+    if (slider) {
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // Angka 2 adalah kecepatan geser
+            slider.scrollLeft = scrollLeft - walk;
+        });
+
+        // Dukungan untuk layar sentuh (Mobile)
+        slider.addEventListener('touchstart', (e) => {
+            isDown = true;
+            startX = e.touches[0].pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+
+        slider.addEventListener('touchend', () => {
+            isDown = false;
+        });
+
+        slider.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            const x = e.touches[0].pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2;
+            slider.scrollLeft = scrollLeft - walk;
+        });
+    }
+
+    // Lightbox Logic
+    const lightbox = document.getElementById('image-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const closeBtn = document.querySelector('.lightbox-close');
+
+    if (lightbox && lightboxImg && closeBtn) {
+        // Event delegation for testimonial images
+        document.addEventListener('click', (e) => {
+            const testimonialImage = e.target.closest('.testimonial-photo');
+            if (testimonialImage) {
+                lightbox.style.display = 'block';
+                lightboxImg.src = testimonialImage.src;
+                const card = testimonialImage.closest('.testimonial-card');
+                const content = card ? card.querySelector('.testimonial-content') : null;
+                lightboxCaption.innerHTML = content ? content.innerText : '';
+                document.body.classList.add('no-scroll');
+            }
+        });
+
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+            document.body.classList.remove('no-scroll');
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.style.display === 'block') {
+                closeLightbox();
+            }
         });
     }
 });

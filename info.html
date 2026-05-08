@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info - Smart Edu | Mengenal Lebih Dalam Tentang Kami</title>
+    <meta name="description"
+        content="Cari tahu bagaimana SmartEdu mengubah pola pikir anak Indonesia menjadi lebih rajin dan pintar dengan metode yang revolusioner.">
+    <!-- CSS Fonts and Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Our Custom Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="logo">
+                    <img src="./res/SEA.jpg" alt="Smart Edu Logo">
+                    <span class="logo-text">Smart Edu</span>
+                </a>
+
+                <nav class="nav-desktop">
+                    <a href="index.html">Home</a>
+                    <a href="info.html">Info</a>
+                    <a href="product.html">Product</a>
+                    <a href="Gate.html">Gate</a>
+                    <a href="index.html#founder">Tentang kami</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+
+                <div class="header-buttons">
+                    <button class="btn btn-primary">Log In</button>
+                    <button class="btn btn-secondary">Daftar</button>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobile-menu-button">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: 100px;">
+        <!-- Info Banner Section -->
+        <section class="section info-banner-section">
+            <div class="container">
+                <div class="info-banner-wrapper animate-on-scroll">
+                    <img src="./res/Banner Info SmartEDU.jpg" alt="Smart Edu Info Banner" class="info-banner-img">
+                </div>
+
+                <div class="info-text-content animate-on-scroll"
+                    style="margin-top: 60px; max-width: 900px; margin-left: auto; margin-right: auto;">
+                    <h1 class="info-title">Apa itu <span class="text-primary">SmartEdu</span>?</h1>
+
+                    <div class="info-quote-box">
+                        <p class="info-description">
+                            "Bagaimana rahasia kami mengubah anak malas jadi rajin dan bagaimana kami menjadikan banyak
+                            anak anak di Indonesia menjadi pintar dengan cepat?"
+                        </p>
+                    </div>
+
+                    <div class="info-details" style="margin-top: 40px;">
+                        <p style="font-size: 1.1rem; color: var(--gray-600); line-height: 1.8;">
+                            SmartEdu bukan sekadar bimbingan belajar biasa. Kami adalah revolusi pendidikan yang fokus
+                            pada perubahan <strong>mindset</strong> dan <strong>metode belajar efektif</strong>. Melalui
+                            riset mendalam oleh Dr. Hendrik, kami telah menemukan formula untuk membangkitkan potensi
+                            jenius dalam diri setiap anak.
+                        </p>
+                        <div style="margin-top: 30px;">
+                            <a href="product.html" class="btn btn-secondary btn-lg">Lihat Product Kami <i
+                                    class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Map Section -->
+                <div class="map-section animate-on-scroll" style="margin-top: 100px; text-align: center;">
+                    <h2 class="info-title">Jangkauan <span class="text-primary">Pelatihan Kami</span></h2>
+                    <p class="section-subtitle" style="margin-bottom: 50px;">SmartEdu telah hadir dan mentransformasi
+                        cara belajar di berbagai wilayah Indonesia.</p>
+
+                    <div class="map-container">
+                        <img src="./res/Peta indo.png" alt="Peta Pelatihan SmartEdu" class="map-image">
+
+                        <!-- Map Points (Pings) -->
+                        <div class="map-point" style="top: 35%; left: 15%;" data-location="Sumatera"
+                            data-img="./res/newsResource/Screenshot (31).png">
+                            <div class="ping"></div>
+                            <div class="point-label">Sumatera</div>
+                        </div>
+
+                        <div class="map-point" style="top: 72%; left: 26%;" data-location="Jabodetabek"
+                            data-img="./res/newsResource/Screenshot (19).png">
+                            <div class="ping"></div>
+                            <div class="point-label">Jabodetabek</div>
+                        </div>
+
+                        <div class="map-point" style="top: 78%; left: 32%;" data-location="Jawa Barat"
+                            data-img="./res/newsResource/Screenshot (17).png">
+                            <div class="ping"></div>
+                            <div class="point-label">Jawa Barat</div>
+                        </div>
+
+                        <div class="map-point" style="top: 80%; left: 38%;" data-location="Jawa Tengah"
+                            data-img="./res/newsResource/Screenshot (17).png">
+                            <div class="ping"></div>
+                            <div class="point-label">Jawa Tengah</div>
+                        </div>
+
+                        <div class="map-point" style="top: 82%; left: 45%;" data-location="Jawa Timur"
+                            data-img="./res/newsResource/Screenshot (17).png">
+                            <div class="ping"></div>
+                            <div class="point-label">Jawa Timur</div>
+                        </div>
+
+                        <div class="map-point" style="top: 42%; left: 42%;" data-location="Kalimantan"
+                            data-img="./res/newsResource/Screenshot (18).png">
+                            <div class="ping"></div>
+                            <div class="point-label">Kalimantan</div>
+                        </div>
+
+                        <div class="map-point" style="top: 52%; left: 62%;" data-location="Sulawesi"
+                            data-img="./res/newsResource/Screenshot (16).png">
+                            <div class="ping"></div>
+                            <div class="point-label">Sulawesi</div>
+                        </div>
+                    </div>
+
+                    <p style="margin-top: 30px; font-style: italic; color: var(--gray-500);">*Klik pada titik lokasi
+                        untuk melihat dokumentasi pelatihan</p>
+                </div>
+
+                <!-- Trainer Profile Section -->
+                <div class="trainer-section animate-on-scroll" style="margin-top: 100px;">
+                    <div class="trainer-top-banner" style="margin-bottom: 40px;">
+                        <img src="./res/banner info SE2.jpg" alt="SmartEdu Action"
+                            style="width: 100%; border-radius: 30px; box-shadow: var(--shadow-xl);">
+                    </div>
+                    <div class="trainer-header-box">
+                        <p>Mengajarkan kemampuan yang tidak diajarkan di lembaga pendidikan lainnya di Indonesia</p>
+                    </div>
+
+                    <div class="trainer-flex-container">
+                        <div class="trainer-image-col">
+                            <div class="trainer-photo-frame">
+                                <img src="./res/bannerOwner2.jpeg" alt="HENDRIK, dr.">
+                            </div>
+                        </div>
+
+                        <div class="trainer-info-col">
+                            <h3 class="profile-label">PROFIL TRAINER</h3>
+                            <h2 class="trainer-name">HENDRIK, dr.</h2>
+
+                            <ul class="trainer-perks">
+                                <li>
+                                    <i class="ri-graduation-cap-line"></i>
+                                    <span>Alumni Kedokteran UNPAD tahun 2007</span>
+                                </li>
+                                <li>
+                                    <i class="ri-lightbulb-flash-line"></i>
+                                    <span>Penemu metode belajar cepat <strong>dr.Hendriks Method</strong> yang telah
+                                        dipatenkan sehingga tidak bisa dipergunakan dan diduplikasi oleh pihak manapun
+                                        dan penemu teknik-teknik baru dalam menyelesaikan soal-soal yang menyulitkan
+                                        siswa dalam belajar, baik SD SMP maupun SMA.</span>
+                                </li>
+                                <li>
+                                    <i class="ri-history-line"></i>
+                                    <span>Berpengalaman di bidang bimbingan belajar dan riset pembelajaran lebih dari 10
+                                        tahun.</span>
+                                </li>
+                                <li>
+                                    <i class="ri-mic-line"></i>
+                                    <span>Pembicara di berbagai seminar tentang pengembangan kemampuan otak untuk
+                                        belajar diseluruh Indonesia.</span>
+                                </li>
+                                <li>
+                                    <i class="ri-focus-3-line"></i>
+                                    <span>Saat ini memfokuskan diri dalam mengembangkan cara meningkatkan konsentrasi,
+                                        kemampuan daya analisis otak dalam matematika dan fisika, serta tehnik menghafal
+                                        cepat akurat dengan daya tahan memori yang lama. Mengembangkan sebuah metode
+                                        terbaik yang bisa digunakan oleh siapapun tanpa melihat kemampuan akademis
+                                        sebelumnya.</span>
+                                </li>
+                            </ul>
+
+                            <div class="trainer-closing">
+                                <p>"Semoga program SMART EDU ini akan semakin meningkatkan kontribusi kita untuk
+                                    kemajuan pendidikan bangsa. Untuk pembicaraan program secara detail dan bentuk
+                                    kerjasama yang disesuaikan dengan lembaga Bapak/Ibu, silahkan langsung menghubungi
+                                    kami."</p>
+                                <a href="https://wa.me/6281383457470" class="btn btn-primary" style="margin-top: 20px;">
+                                    <i class="ri-whatsapp-line"></i> Hubungi via WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <span class="footer-logo">Smart Edu</span>
+                    <p class="footer-description">Memajukan dan mentransformasi cara berpikir rasional pelajar di
+                        Indonesia lintas dekade.</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="ri-facebook-fill"></i></a>
+                        <a href="#" class="social-icon"><i class="ri-twitter-fill"></i></a>
+                        <a href="#" class="social-icon"><i class="ri-instagram-line"></i></a>
+                        <a href="#" class="social-icon"><i class="ri-youtube-fill"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Link Cepat (Shortcut)</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="kelas.html">Kelas</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Aljabar</a></li>
+                        <li><a href="#">Geometri</a></li>
+                        <li><a href="#">Kalkulus</a></li>
+                        <li><a href="#">Statistika</a></li>
+                        <li><a href="#">Trigonometri</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="footer-links">
+                        <li class="footer-contact-item">
+                            <div class="footer-contact-icon"><i class="ri-map-pin-line"></i></div>
+                            <span class="footer-contact-text">Jl. Cicalengka Raya No. 69, Antapani Kidul, Bandung, Jawa
+                                Barat, Indonesia</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <div class="footer-contact-icon"><i class="ri-mail-line"></i></div>
+                            <span class="footer-contact-text">@hendrikdr</span>
+                        </li>
+                        <li class="footer-contact-item">
+                            <div class="footer-contact-icon"><i class="ri-phone-line"></i></div>
+                            <span class="footer-contact-text">+62 813 83457470</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Smart Edu. All rights reserved. Built with passion for better education.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="mobile-menu-logo" style="text-decoration:none;">
+                <img src="./res/SEA.jpg" alt="Smart Edu Logo">
+                <span>Smart Edu</span>
+            </a>
+            <button class="close-menu" id="close-menu">
+                <i class="ri-close-line"></i>
+            </button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="info.html">Info</a>
+            <a href="product.html">Product</a>
+            <a href="Gate.html">Gate</a>
+            <a href="index.html#founder">Tentang kami</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="mobile-buttons">
+            <button class="btn btn-primary">Log In</button>
+            <button class="btn btn-secondary">Daftar</button>
+        </div>
+    </div>
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+
+    <style>
+        .info-banner-wrapper {
+            width: 100%;
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            background: var(--gray-100);
+        }
+
+        .info-banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+            /* Ensure it's not cut off as requested */
+            max-height: 600px;
+            margin: 0 auto;
+        }
+
+        .info-title {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--gray-900);
+        }
+
+        .text-primary {
+            color: var(--primary-color);
+        }
+
+        .info-quote-box {
+            padding: 40px;
+            background: linear-gradient(135deg, rgba(102, 176, 255, 0.05), rgba(255, 159, 67, 0.05));
+            border-left: 8px solid var(--secondary-color);
+            border-radius: var(--radius-lg);
+            position: relative;
+        }
+
+        .info-quote-box::before {
+            content: '\201C';
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-size: 5rem;
+            color: rgba(255, 159, 67, 0.1);
+            font-family: serif;
+        }
+
+        .info-description {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--gray-800);
+            line-height: 1.5;
+            position: relative;
+            z-index: 1;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .info-title {
+                font-size: 2.2rem;
+            }
+
+            .info-description {
+                font-size: 1.25rem;
+            }
+
+            .info-quote-box {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Trainer Profile Styling */
+        .trainer-section {
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .trainer-header-box {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            border: 2px solid var(--primary-color);
+            border-radius: 20px;
+            padding: 20px 40px;
+            text-align: center;
+            margin-bottom: 60px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .trainer-header-box p {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .trainer-flex-container {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        .trainer-image-col {
+            flex: 0 0 320px;
+        }
+
+        .trainer-photo-frame {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            border: 10px solid white;
+        }
+
+        .trainer-photo-frame img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .trainer-photo-frame:hover img {
+            transform: scale(1.05);
+        }
+
+        .trainer-info-col {
+            flex: 1;
+        }
+
+        .profile-label {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .trainer-name {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 30px;
+            text-decoration: underline;
+            text-underline-offset: 8px;
+            text-decoration-color: var(--secondary-color);
+        }
+
+        .trainer-perks {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 40px 0;
+        }
+
+        .trainer-perks li {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            font-size: 1rem;
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+
+        .trainer-perks i {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            flex-shrink: 0;
+            margin-top: -2px;
+        }
+
+        .trainer-closing {
+            background: var(--gray-50);
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .trainer-closing p {
+            font-style: italic;
+            color: var(--gray-600);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        @media (max-width: 991px) {
+            .trainer-flex-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .trainer-perks li {
+                text-align: left;
+            }
+
+            .trainer-image-col {
+                flex: 0 0 auto;
+                width: 280px;
+                margin-bottom: 40px;
+            }
+        }
+
+        /* Interactive Map Styling */
+        .map-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .map-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .map-point {
+            position: absolute;
+            cursor: pointer;
+            z-index: 5;
+            transition: transform 0.3s ease;
+        }
+
+        .map-point:hover {
+            transform: scale(1.2);
+        }
+
+        .ping {
+            width: 15px;
+            height: 15px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .ping::after {
+            content: '';
+            position: absolute;
+            top: -2.5px;
+            left: -2.5px;
+            width: 20px;
+            height: 20px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: ping-anim 1.5s infinite;
+        }
+
+        .point-label {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-dark);
+            color: #fff;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .map-point:hover .point-label {
+            opacity: 1;
+        }
+
+        @keyframes ping-anim {
+            0% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: scale(2.5);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .ping {
+                width: 10px;
+                height: 10px;
+            }
+
+            .ping::after {
+                width: 15px;
+                height: 15px;
+            }
+
+            .point-label {
+                font-size: 0.6rem;
+                padding: 2px 8px;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mapPoints = document.querySelectorAll('.map-point');
+            const lightbox = document.getElementById('image-lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            mapPoints.forEach(point => {
+                point.addEventListener('click', () => {
+                    const imgSrc = point.getAttribute('data-img');
+                    const location = point.getAttribute('data-location');
+
+                    if (lightbox && lightboxImg) {
+                        lightbox.style.display = 'block';
+                        lightboxImg.src = imgSrc;
+                        lightboxCaption.innerHTML = `Dokumentasi Pelatihan: <strong>${location}</strong>`;
+                        document.body.classList.add('no-scroll');
+                    }
+                });
+            });
+
+            function closeLightbox() {
+                if (lightbox) {
+                    lightbox.style.display = 'none';
+                    document.body.classList.remove('no-scroll');
+                }
+            }
+
+            const closeBtn = document.querySelector('.lightbox-close');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeLightbox);
+            }
+
+            if (lightbox) {
+                lightbox.addEventListener('click', (e) => {
+                    if (e.target === lightbox) {
+                        closeLightbox();
+                    }
+                });
+            }
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeLightbox();
+                }
+            });
+        });
+    </script>
+    <!-- Lightbox for Testimonials & Map -->
+    <div id="image-lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
+</body>
+
+</html>

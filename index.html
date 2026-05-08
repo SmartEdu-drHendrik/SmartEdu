@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Edu - Home | Bimbingan Belajar & Konsultasi Pendidikan Anak No. 1</title>
-    <meta name="description" content="SmartEdu Dr. Hendrik: Program pendidikan terbukti mengubah pola pikir anak malas menjadi rajin dan ahli matematika dengan cepat melalui metode out-of-the-box.">
-    <meta name="keywords" content="SmartEdu, Dr. Hendrik, bimbingan belajar, kursus matematika, konsultasi anak, pendidikan Indonesia, belajar cepat">
+    <meta name="description"
+        content="SmartEdu Dr. Hendrik: Program pendidikan terbukti mengubah pola pikir anak malas menjadi rajin dan ahli matematika dengan cepat melalui metode out-of-the-box.">
+    <meta name="keywords"
+        content="SmartEdu, Dr. Hendrik, bimbingan belajar, kursus matematika, konsultasi anak, pendidikan Indonesia, belajar cepat">
     <!-- CSS Fonts and Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +17,8 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
     <!-- Our Custom Style -->
-    <link rel="stylesheet" href="css/style.css?v=1.2">
-    <script src="js/main.js?v=1.2" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -39,7 +41,8 @@
 
                 <nav class="nav-desktop">
                     <a href="index.html">Home</a>
-                    <a href="kelas.html">Kelas</a>
+                    <a href="info.html">Info</a>
+                    <a href="product.html">Product</a>
                     <a href="Gate.html">Gate</a>
                     <a href="#founder">Tentang kami</a>
                     <a href="#contact">Contact</a>
@@ -62,11 +65,25 @@
     <section class="hero-section">
         <div class="container">
             <div class="hero-content animate-on-scroll">
-                <div class="smart-edu-logo">
-                    <span class="smart-part">Smart</span>
-                    <span class="edu-part">Edu</span>
+                <div class="hero-mobile-banner">
+                    <img src="./res/bannerdr2.jpeg.png" alt="Dr. Hendrik Founder SmartEdu">
+                    <div class="hero-mobile-text-overlay">
+                        <div class="smart-edu-logo">
+                            <span class="smart-part">Smart</span>
+                            <span class="edu-part">Edu</span>
+                        </div>
+                        <h2 class="hero-subtitle">Ubah cara berfikirmu mulai dari hari ini</h2>
+                    </div>
                 </div>
-                <h2 class="hero-subtitle">Ubah cara berfikirmu mulai dari hari ini</h2>
+
+                <!-- Desktop visible version (hidden on mobile via CSS) -->
+                <div class="hero-desktop-content">
+                    <div class="smart-edu-logo">
+                        <span class="smart-part">Smart</span>
+                        <span class="edu-part">Edu</span>
+                    </div>
+                    <h2 class="hero-subtitle">Ubah cara berfikirmu mulai dari hari ini</h2>
+                </div>
                 <p class="hero-description">"Udah ga zaman pepatah biar lambat asal selamat,
                     <br> <br>
                     sudah tahun 2026, persaingan sangat ketat,
@@ -78,7 +95,7 @@
                     Perkembangan dunia sangatlah cepat,
                     ​Jadilah generasi baru yang lebih baik dari generasi sebelumnya "
                 </p>
-                <a href="kelas.html" class="btn btn-secondary btn-lg">Jelajahi Kelas <i class="ri-arrow-right-line"
+                <a href="product.html" class="btn btn-secondary btn-lg">Jelajahi Product <i class="ri-arrow-right-line"
                         style="margin-left: 8px;"></i></a>
             </div>
         </div>
@@ -120,15 +137,17 @@
     <!-- Key Benefits Section -->
     <section class="section benefits-section">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">BIMBINGAN BELAJAR DAN KONSULTASI PENDIDIKAN ANAK NO 1 DI INDONESIA</h2>
-            
+            <h2 class="section-title animate-on-scroll">BIMBINGAN BELAJAR DAN KONSULTASI PENDIDIKAN ANAK NO 1 DI
+                INDONESIA</h2>
+
             <div class="grid grid-cols-1 grid-cols-md-3">
                 <!-- Point 1 -->
                 <div class="card benefit-card animate-on-scroll">
                     <img src="./res/SEA.jpg" alt="Konsultasi Anak Gratis" class="benefit-img">
                     <div class="card-body">
                         <h3 class="benefit-title">1. Atasi anak malas belajar jadi rajin dalam 1 hari</h3>
-                        <p class="benefit-description">Termasuk anak kecanduan game: BUKA KONSULTASI ANAK GRATIS, bagi bapak ibu yang ingin membuktikan perubahan kemampuan belajar anaknya HANYA dalam 1 jam.</p>
+                        <p class="benefit-description">Termasuk anak kecanduan game: BUKA KONSULTASI ANAK GRATIS, bagi
+                            bapak ibu yang ingin membuktikan perubahan kemampuan belajar anaknya HANYA dalam 1 jam.</p>
                     </div>
                 </div>
                 <!-- Point 2 -->
@@ -136,18 +155,176 @@
                     <img src="./res/SElogo.jpg" alt="Berhitung Cepat" class="benefit-img">
                     <div class="card-body">
                         <h3 class="benefit-title">2. Kuasai perkalian & pembagian dalam 1 hari</h3>
-                        <p class="benefit-description">Belajar skill berhitung cepat, penjumlahan jutaan cepat, perkalian ribuan cepat, hingga skill berhitung soal soal sulit matematika diluar kepala seperti pecahan, akar pangkat 3, perbandingan, gradien dan garis, baris aritmatika, dll.</p>
+                        <p class="benefit-description">Belajar skill berhitung cepat, penjumlahan jutaan cepat,
+                            perkalian ribuan cepat, hingga skill berhitung soal soal sulit matematika diluar kepala
+                            seperti pecahan, akar pangkat 3, perbandingan, gradien dan garis, baris aritmatika, dll.</p>
                     </div>
                 </div>
                 <!-- Point 3 -->
                 <div class="card benefit-card animate-on-scroll">
-                    <img src="./res/bannerOwner.jpg" alt="Kuasai Tiap Bab" class="benefit-img">
+                    <img src="./res/bannerOwner2.jpeg" alt="Kuasai Tiap Bab" class="benefit-img">
                     <div class="card-body">
                         <h3 class="benefit-title">3. Kuasai setiap BaB matematika dalam hitungan menit</h3>
-                        <p class="benefit-description">Contoh belajar operasi bilangan bulat dalam 2 menit langsung BISA, operasi penjumlahan, pengurangan, perkalian, dan pembagian desimal dikuasai dalam 10-15 menit, kuasai akar pangkat 3 hanya dalam 3 menit DAN BANYAK MATERI LAINNYA. Buktikan hasilnya dengan test langsung.</p>
+                        <p class="benefit-description">Contoh belajar operasi bilangan bulat dalam 2 menit langsung
+                            BISA, operasi penjumlahan, pengurangan, perkalian, dan pembagian desimal dikuasai dalam
+                            10-15 menit, kuasai akar pangkat 3 hanya dalam 3 menit DAN BANYAK MATERI LAINNYA. Buktikan
+                            hasilnya dengan test langsung.</p>
+                    </div>
+                </div>
+
+                <div class="card course-card animate-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="card-body">
+                        <div class="course-icon course-icon-secondary">
+                            <i class="ri-group-line"></i>
+                        </div>
+                        <h3 class="course-title">Jangkauan Luas & Terpercaya</h3>
+                        <p class="course-description">Seminar pelatihan dasar Smartedu telah sukses diikuti oleh lebih
+                            dari 80.000 peserta di seluruh Indonesia dalam kurun waktu 2 tahun terakhir.</p>
+                    </div>
+                </div>
+
+                <div class="card course-card animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="card-body">
+                        <div class="course-icon course-icon-primary">
+                            <i class="ri-translate-2"></i>
+                        </div>
+                        <h3 class="course-title">Mastery Bahasa Inggris Instan</h3>
+                        <p class="course-description">Metode revolusioner yang memungkinkan penguasaan 16 Tenses hanya
+                            dalam 1-2 hari serta kemampuan percakapan aktif secara cepat dan efektif.</p>
+                    </div>
+                </div>
+
+                <div class="card course-card animate-on-scroll" style="transition-delay: 0.3s;">
+                    <div class="card-body">
+                        <div class="course-icon course-icon-secondary">
+                            <i class="ri-brain-line"></i>
+                        </div>
+                        <h3 class="course-title">Optimalisasi Memori Jangka Panjang</h3>
+                        <p class="course-description">Pelatihan teknik menghafal cepat untuk materi akademis dan
+                            Al-Qur'an dengan tingkat akurasi tinggi serta daya ingat yang permanen.</p>
+                    </div>
+                </div>
+
+                <div class="card course-card animate-on-scroll" style="grid-column: span 1; transition-delay: 0.4s;">
+                    <div class="card-body">
+                        <div class="course-icon course-icon-primary">
+                            <i class="ri-medal-line"></i>
+                        </div>
+                        <h3 class="course-title">Hasil Nyata & Teruji (Trial Tersedia)</h3>
+                        <p class="course-description">Kami memberikan bukti, bukan sekadar janji. Buktikan
+                            efektivitasnya melalui Konsultasi Gratis dan kelas Trial. Alumnus kami sukses menembus
+                            institusi favorit seperti SMA 3 Bandung, ITB, Kedokteran UNPAD, STAN, dan lainnya.</p>
+                    </div>
+                </div>
+
+                <div class="card course-card animate-on-scroll" style="transition-delay: 0.5s;">
+                    <div class="card-body">
+                        <div class="course-icon course-icon-secondary">
+                            <i class="ri-money-dollar-circle-line"></i>
+                        </div>
+                        <h3 class="course-title">Investasi Pendidikan Terbaik</h3>
+                        <p class="course-description">Dapatkan kualitas bimbingan belajar premium dengan biaya paling
+                            terjangkau, mulai dari <b>Rp175.000 per semester</b> (Syarat & Ketentuan berlaku).</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--gray-50); border-radius: 40px; margin: 40px 0;">
+        <div class="container text-center">
+            <div class="animate-on-scroll">
+                <h2 class="section-title">Eksplorasi Program & Hasil Nyata</h2>
+                <p class="section-subtitle" style="max-width: 800px; margin-left: auto; margin-right: auto;">
+                    Ingin melihat langsung bagaimana suasana kelas, materi eksklusif, serta testimoni dari siswa dan
+                    orang tua yang telah bertransformasi bersama kami?
+                </p>
+
+                <div style="margin: 30px 0;">
+                    <p style="font-size: 1.1rem; color: var(--gray-700); margin-bottom: 20px; font-weight: 500;">
+                        <i class="ri-youtube-fill"
+                            style="color: #ff0000; vertical-align: middle; font-size: 1.5rem;"></i>
+                        Kunjungi kanal YouTube resmi kami melalui tautan di bagian bawah halaman ini.
+                    </p>
+                    <div
+                        style="background: white; padding: 30px; border-radius: 20px; box-shadow: var(--shadow-md); border-left: 5px solid var(--primary-color);">
+                        <p style="font-style: italic; font-size: 1.15rem; color: var(--gray-800); line-height: 1.6;">
+                            "Bersama Smartedu, semua bab matematika menjadi super mudah. Kami membuka lebar peluang bagi
+                            setiap siswa untuk meraih prestasi akademik gemilang dan masa depan yang cerah."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section news-section" style="padding: 80px 0; background: #fff;">
+        <div class="container">
+            <div class="text-center mb-10 animate-on-scroll">
+                <span class="badge"
+                    style="background: var(--primary-color); color: white; padding: 5px 15px; border-radius: 20px; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;">Update
+                    Terbaru</span>
+                <h2 class="section-title" style="margin-top: 15px;">Smart Edu News</h2>
+                <p class="section-subtitle">Klik dan geser untuk melihat dokumentasi kegiatan kami.</p>
+            </div>
+        </div>
+
+        <div class="news-draggable-wrapper" id="news-slider">
+            <div class="news-track">
+                <div class="news-card">
+                    <img src="./res/news1.jpg" alt="Kemitraan">
+                    <div class="news-overlay"><span>Promo SmartEdu</span></div>
+                </div>
+                <div class="news-card">
+                    <img src="./res/news2.jpg" alt="Kemitraan">
+                    <div class="news-overlay"><span>Channel Youtube Resmi SmartEdu dr Hendrik</span></div>
+                </div>
+                <div class="news-card">
+                    <img src="./res/newsResource/Screenshot (28).png" alt="Seminar Smart Edu">
+                    <div class="news-overlay"><span>Semakin banyak siswa dan orang tua mengikuti pelatihan
+                            SmartEdu</span></div>
+                </div>
+                <div class="news-card">
+                    <img src="./res/newsResource/Screenshot (27).png" alt="Kelas Belajar">
+                    <div class="news-overlay"><span>Pemberian Sertifikat Pelatihan 32 Jam Offline dan Online</span>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="./res/newsResource/Screenshot (26).png" alt="Pelatihan Guru">
+                    <div class="news-overlay"><span>Smart edu Team tersebar di seluruh Indonesia</span></div>
+                </div>
+                <div class="news-card">
+                    <img src="./res/newsResource/Screenshot (20).png" alt="Siswa Berprestasi">
+                    <div class="news-overlay"><span>SmartEdu level 1 Home Schooling ka seto TITAN Center
+                            Tanggerang</span></div>
+                </div>
+                <div class="news-card">
+                    <img src="./res/newsResource/Screenshot (29).png" alt="Kemitraan">
+                    <div class="news-overlay"><span>Buku SmartEdu Telah di gunakan oleh banyak siswa dan guru dari Aceh
+                            Hingga papua</span></div>
+                </div>
+
+                <div class="news-card">
+                    <img src="./res/newsResource/Screenshot (30).png" alt="Seminar Smart Edu">
+                    <div class="news-overlay"><span>Info Smartedu untuk seluruh orang tua dan anak-anak di
+                            Indonesia</span></div>
+                </div>
+                <div class="news-card">
+                    <img src="./res/newsResource/Screenshot (14).png" alt="Kelas Belajar">
+                    <div class="news-overlay"><span>Seminar SmartEdu di berbagai sekolah di indonesia</span></div>
+                </div>
+                <div class="news-card">
+                    <img src="./res/newsResource/Screenshot (15).png" alt="Pelatihan Guru">
+                    <div class="news-overlay"><span>Dokumentasi seminar SmartEdu di sekolah-sekolah indonesia</span>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <img src="./res/newsResource/Screenshot (22).png" alt="Siswa Berprestasi">
+                    <div class="news-overlay"><span>berbagai Testimoni Pelatihan SmartEdu dr Hendrik</span></div>
+                </div>
+
+            </div>
+        </div>
         </div>
     </section>
 
@@ -173,7 +350,7 @@
 
             <div class="founder-container animate-on-scroll">
                 <div class="founder-image">
-                    <img src="./res/owner.jpg" alt="Dr. Hendrik">
+                    <img src="./res/bannerOwner2.jpeg" alt="Dr. Hendrik">
                 </div>
 
                 <div class="founder-info">
@@ -228,8 +405,8 @@
             <div class="text-center">
                 <h2 class="section-title animate-on-scroll newsletter-title">Selalu Paling Baru</h2>
                 <div class="newsletter-video-wrap">
-                    <video class="newsletter-video" src="./res/WhatsApp Video 2025-04-01 at 12.48.27.mp4" autoplay muted
-                        loop playsinline></video>
+                    <!-- <video class="newsletter-video" src="./res/WhatsApp Video 2025-04-01 at 12.48.27.mp4" autoplay muted
+                        loop playsinline></video> -->
                 </div>
                 <p class="section-subtitle animate-on-scroll newsletter-subtitle">
                     Dukung dan ikuti media sosial kami agar SmartEdu dapat terus berkembang menjadi pelopor edukasi
@@ -265,8 +442,8 @@
                     <h3 class="footer-heading">Link Cepat (Shortcut)</h3>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="#">Tentang Kami</a></li>
-                        <li><a href="kelas.html">Kelas</a></li>
+                        <li><a href="product.html">product</a></li>
+                        <li><a href="Gate.html">GATE</a></li>
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
@@ -293,11 +470,11 @@
                         </li>
                         <li class="footer-contact-item">
                             <div class="footer-contact-icon"><i class="ri-mail-line"></i></div>
-                            <span class="footer-contact-text">HendrikTopGlobalDonghuang@gmail.com</span>
+                            <span class="footer-contact-text">@hendrikdr</span>
                         </li>
                         <li class="footer-contact-item">
                             <div class="footer-contact-icon"><i class="ri-phone-line"></i></div>
-                            <span class="footer-contact-text">+62 812 0000 0000</span>
+                            <span class="footer-contact-text">+62 813 83457470</span>
                         </li>
                     </ul>
                 </div>
@@ -326,7 +503,8 @@
 
         <nav class="mobile-nav">
             <a href="index.html">Home</a>
-            <a href="kelas.html">Kelas</a>
+            <a href="info.html">Info</a>
+            <a href="product.html">Product</a>
             <a href="Gate.html">Gate</a>
             <a href="#founder">Tentang kami</a>
             <a href="#contact">Contact</a>
@@ -342,6 +520,13 @@
     <button id="back-to-top" class="back-to-top" aria-label="Kembali ke atas">
         <i class="ri-arrow-up-line"></i>
     </button>
+
+    <!-- Lightbox for Testimonials -->
+    <div id="image-lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div id="lightbox-caption"></div>
+    </div>
 </body>
 
 </html>

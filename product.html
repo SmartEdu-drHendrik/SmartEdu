@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk Smart Edu dr Hendrik - Solusi Pendidikan Cerdas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <style>
+        /* CSS Tambahan khusus untuk improvisasi Page Product */
+        .product-hero {
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+            overflow: hidden;
+        }
+
+        .hero-flex {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: var(--shadow-lg);
+            border: 8px solid white;
+        }
+
+        .video-card {
+            background: white;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            margin-bottom: 30px;
+        }
+
+        .video-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--gray-800);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .video-title i {
+            color: #ff0000;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+            background: var(--gray-100);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .video-container iframe,
+        .video-container .video-placeholder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .video-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--gray-400);
+            border: 2px dashed var(--gray-200);
+        }
+
+        .cta-section {
+            background: var(--primary-dark);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            border-radius: 40px;
+            margin: 60px 20px;
+        }
+
+        @media (max-width: 768px) {
+            .hero-flex {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .product-hero {
+                padding-top: 120px;
+            }
+        }
+
+        /* Product Card Border Improvements */
+        .course-card {
+            transition: all 0.3s ease;
+            border: 1px solid var(--gray-100);
+        }
+
+        .course-card-primary {
+            border-top: 6px solid var(--primary-color);
+        }
+
+        .course-card-secondary {
+            border-top: 6px solid var(--secondary-color);
+        }
+
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-xl);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="logo">
+                    <img src="./res/SEA.jpg" alt="Smart Edu Logo">
+                    <span class="logo-text">Smart Edu</span>
+                </a>
+                <nav class="nav-desktop">
+                    <a href="index.html">Home</a>
+                    <a href="info.html">Info</a>
+                    <a href="product.html" class="active">Product</a>
+                    <a href="Gate.html">Gate</a>
+                    <a href="index.html#founder">Tentang kami</a>
+                </nav>
+                <div class="header-buttons">
+                    <button class="btn btn-secondary">Daftar Sekarang</button>
+                </div>
+                <button class="mobile-menu-btn" id="mobile-menu-button">
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="product-hero">
+        <div class="container">
+            <div class="hero-flex">
+                <div class="hero-text animate-on-scroll">
+                    <span
+                        style="color: var(--secondary-color); font-weight: 700; text-transform: uppercase; letter-spacing: 2px;">Premium
+                        Education</span>
+                    <h1 style="font-size: 3.5rem; line-height: 1.1; margin: 15px 0; color: var(--gray-900);">Produk
+                        Smart Edu dr Hendrik</h1>
+                    <p style="font-size: 1.1rem; color: var(--gray-600); margin-bottom: 30px;">Katalog solusi pendidikan
+                        terlengkap untuk akselerasi kecerdasan anak dan peluang kemitraan masa depan.</p>
+                    <div class="flex gap-4">
+                        <a href="#explore" class="btn btn-primary btn-lg">Lihat Produk</a>
+                        <a href="#video-area" class="btn btn-secondary btn-lg">Tonton Tutorial</a>
+                    </div>
+                </div>
+                <div class="hero-image animate-on-scroll">
+                    <img src="./res/bannerdr2.jpeg.png" alt="Smart Edu Banner Image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="explore">
+        <div class="container">
+            <div class="grid grid-cols-1 grid-cols-sm-2 grid-cols-lg-4">
+                <div class="card course-card course-card-primary animate-on-scroll">
+                    <div class="card-body">
+                        <div class="course-icon course-icon-primary"><i class="ri-book-open-line"></i></div>
+                        <h3 class="course-title">Videobook Matematika Dasar</h3>
+                        <p class="course-description">4 Modul interaktif untuk penguasaan konsep matematika fundamental
+                            bagi siswa & guru.</p>
+                    </div>
+                </div>
+
+                <div class="card course-card course-card-secondary animate-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="card-body">
+                        <div class="course-icon course-icon-secondary"><i class="ri-usb-drive-line"></i></div>
+                        <h3 class="course-title">SmartKids Formula (SkF)</h3>
+                        <p class="course-description">Flashdisk eksklusif berisi 13 materi wajib untuk mencetak anak
+                            pintar matematika.</p>
+                    </div>
+                </div>
+
+                <div class="card course-card course-card-primary animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="card-body">
+                        <div class="course-icon course-icon-primary"><i class="ri-brain-line"></i></div>
+                        <h3 class="course-title">Metode Memori Akurat</h3>
+                        <p class="course-description">Teknik menghafal cepat untuk pelajaran sekolah dan Al-Qur'an
+                            dengan daya ingat permanen.</p>
+                    </div>
+                </div>
+
+                <div class="card course-card course-card-secondary animate-on-scroll" style="transition-delay: 0.3s;">
+                    <div class="card-body">
+                        <div class="course-icon course-icon-secondary"><i class="ri-translate"></i></div>
+                        <h3 class="course-title">Videobook English Mastery</h3>
+                        <p class="course-description">Kuasai 16 tenses hanya dalam 2 hari dengan metode belajar
+                            percakapan super cepat.</p>
+                    </div>
+                </div>
+
+                <div class="card course-card course-card-primary animate-on-scroll">
+                    <div class="card-body">
+                        <div class="course-icon course-icon-primary"><i class="ri-parent-line"></i></div>
+                        <h3 class="course-title">Videobook Edukasi PAUD</h3>
+                        <p class="course-description">Latihan motorik, konsentrasi, dan baca tulis efektif untuk
+                            persiapan masuk SD.</p>
+                    </div>
+                </div>
+
+                <div class="card course-card course-card-secondary animate-on-scroll" style="transition-delay: 0.1s;">
+                    <div class="card-body">
+                        <div class="course-icon course-icon-secondary"><i class="ri-store-2-line"></i></div>
+                        <h3 class="course-title">Kemitraan RPS</h3>
+                        <p class="course-description">Buka les Smartedu di kota Anda dan hasilkan pendapatan bulanan
+                            yang menjanjikan.</p>
+                    </div>
+                </div>
+
+                <div class="card course-card course-card-primary animate-on-scroll" style="transition-delay: 0.2s;">
+                    <div class="card-body">
+                        <div class="course-icon course-icon-primary"><i class="ri-book-mark-line"></i></div>
+                        <h3 class="course-title">Rumah Pintar Al-Qur'an</h3>
+                        <p class="course-description">Program khusus untuk menghafal Al-Qur'an dengan metode Smartedu
+                            yang teruji.</p>
+                    </div>
+                </div>
+
+                <div class="card course-card course-card-secondary animate-on-scroll" style="transition-delay: 0.3s;">
+                    <div class="card-body">
+                        <div class="course-icon course-icon-secondary"><i class="ri-building-4-line"></i></div>
+                        <h3 class="course-title">Kerjasama Institusi</h3>
+                        <p class="course-description">Program edukasi kolaboratif untuk sekolah dengan biaya yang sangat
+                            terjangkau.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="video-area" style="background-color: var(--gray-50);">
+        <div class="container">
+            <div class="text-center mb-12">
+                <h2 class="section-title animate-on-scroll">Galeri Penjelasan Produk</h2>
+                <p class="section-subtitle animate-on-scroll">Tonton video demonstrasi untuk memahami lebih dalam
+                    manfaat dari setiap program kami.</p>
+            </div>
+
+            <div class="grid grid-cols-1 grid-cols-lg-2 gap-8">
+                <div class="video-card animate-on-scroll">
+                    <h4 class="video-title"><i class="ri-play-circle-fill"></i> Video Penjelasan Metode SmartEdu</h4>
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <iframe src="https://www.youtube.com/embed/wVp-FkD8NXA?si=uH4VSh1snnUU2ilA"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-card animate-on-scroll" style="transition-delay: 0.1s;">
+                    <h4 class="video-title"><i class="ri-play-circle-fill"></i> Demonstrasi Menghafal Cepat</h4>
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <iframe src="https://www.youtube.com/embed/4vevA4k88dU?si=2Bclh8EHS0cTR-Oc"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="cta-section animate-on-scroll">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Siap Memulai Transformasi Pendidikan?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 30px; opacity: 0.9;">Dapatkan konsultasi gratis mengenai produk
+                yang paling cocok untuk buah hati Anda.</p>
+            <a href="#" class="btn btn-secondary btn-lg" style="background: white; color: var(--primary-dark);">Hubungi
+                Kami di WhatsApp</a>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <span class="footer-logo">Smart Edu</span>
+                    <p class="footer-description">Memajukan cara berpikir rasional pelajar di Indonesia.</p>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Shortcut</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Product</a></li>
+                        <li><a href="Gate.html">Gate</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <p style="color: var(--gray-300); font-size: 0.9rem;">Jl. Cicalengka Raya No. 69, Bandung</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Smart Edu. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="mobile-menu-logo">
+                <img src="./res/SEA.jpg" alt="Logo">
+                <span>Smart Edu</span>
+            </a>
+            <button class="close-menu" id="close-menu"><i class="ri-close-line"></i></button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="index.html">Home</a>
+            <a href="info.html">Info</a>
+            <a href="product.html">Product</a>
+            <a href="Gate.html">Gate</a>
+        </nav>
+    </div>
+</body>
+
+</html>
