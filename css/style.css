@@ -722,12 +722,14 @@ header.header-transparent {
     .hero-mobile-banner {
         display: block;
         position: relative;
-        width: 100%;
+        width: calc(100% + 48px);
+        margin-left: -24px;
+        margin-right: -24px;
         aspect-ratio: 16 / 9;
-        border-radius: var(--radius-lg);
+        border-radius: 0;
         overflow: hidden;
         margin-bottom: 30px;
-        box-shadow: var(--shadow-xl);
+        box-shadow: none;
         background-color: var(--gray-100);
     }
     
@@ -745,7 +747,7 @@ header.header-transparent {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        padding: 20px;
+        padding: 20px 24px;
         text-align: left;
     }
 
@@ -2231,4 +2233,105 @@ body.no-scroll {
 
 .testimonial-image-container {
     cursor: pointer;
+}
+
+/* Interactive Map Styling */
+.map-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+}
+
+.map-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.map-point {
+    position: absolute;
+    cursor: pointer;
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+.map-point:hover {
+    transform: scale(1.2);
+}
+
+.ping {
+    width: 15px;
+    height: 15px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    position: relative;
+}
+
+.ping::after {
+    content: '';
+    position: absolute;
+    top: -2.5px;
+    left: -2.5px;
+    width: 20px;
+    height: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: ping-anim 1.5s infinite;
+}
+
+.point-label {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-dark);
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.map-point:hover .point-label {
+    opacity: 1;
+}
+
+@keyframes ping-anim {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .ping {
+        width: 10px;
+        height: 10px;
+    }
+
+    .ping::after {
+        width: 15px;
+        height: 15px;
+    }
+
+    .point-label {
+        font-size: 0.6rem;
+        padding: 2px 8px;
+    }
 }

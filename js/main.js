@@ -105,13 +105,13 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         {
             icon: "ri-question-answer-line",
-            title: "24/7 Dukungan Ahli",
-            description: "Tanyakan soalmu, tim edukator profesional kami akan menjawabnya selangkah demi selangkah."
+            title: "Bimbingan Belajar",
+            description: "tersedia grup untuk bertanya jawab"
         },
         {
-            icon: "ri-award-line",
-            title: "Sertifikat Terverifikasi",
-            description: "Dapatkan sertifikat keahlian yang diakui secara nasional setelah menyelesaikan kurikulum dengan baik."
+            icon: "ri-video-line",
+            title: "Video Pembelajaran",
+            description: "Belajar matematika jadi lebih mudah dan menyenangkan dengan video pembelajaran"
         }
     ];
 
@@ -329,15 +329,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeBtn = document.querySelector('.lightbox-close');
 
     if (lightbox && lightboxImg && closeBtn) {
-        // Event delegation for testimonial images
+        // Event delegation for testimonial images and map points
         document.addEventListener('click', (e) => {
             const testimonialImage = e.target.closest('.testimonial-photo');
+            const mapPoint = e.target.closest('.map-point');
+
             if (testimonialImage) {
                 lightbox.style.display = 'block';
                 lightboxImg.src = testimonialImage.src;
                 const card = testimonialImage.closest('.testimonial-card');
                 const content = card ? card.querySelector('.testimonial-content') : null;
                 lightboxCaption.innerHTML = content ? content.innerText : '';
+                document.body.classList.add('no-scroll');
+            } else if (mapPoint) {
+                lightbox.style.display = 'block';
+                lightboxImg.src = mapPoint.getAttribute('data-img');
+                const location = mapPoint.getAttribute('data-location');
+                lightboxCaption.innerHTML = `Dokumentasi Pelatihan: <strong>${location}</strong>`;
                 document.body.classList.add('no-scroll');
             }
         });
